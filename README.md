@@ -10,14 +10,15 @@
 
 The dataset is organized via a text file in which each line corresponds to one image sample. Each line includes the relative image path and three associated clinical labels, separated by spaces:
 
- [image_path] [pathological_type_label] [differentiation_label] [invasion_depth_label]
+ ----_[image_path] [pathological_type_label] [differentiation_label] [invasion_depth_label]_
 
 **Images and annotations examples**
 
 | Image_Path                                                   | pathological | differentiation | infiltration | segmentation |
 | ------------------------------------------------------------ | ------------ | --------------- | ------------ | ------------ |
-| <img src="C:\Users\dianzishi03\AppData\Roaming\Typora\typora-user-images\image-20250419162118485.png" alt="image-20250419162118485" style="zoom:33%;" /> |              |                 |              |              |
-|                                                              |              |                 |              |              |
+| ![image1](./images/1.jpg) |       0       |          2       |       2       |  ![image1_mask](./images/1_mask.jpg)            |
+| ![image1](./images/2.jpg) |        1      |         0        |       0       |  ![image1_mask](./images/2_mask.jpg)            |
+| ![image1](./images/3.jpg) |       1       |         1        |       1       |  ![image1_mask](./images/3_mask.jpg)            |
 
 
 
