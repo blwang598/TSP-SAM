@@ -16,13 +16,10 @@ The dataset is organized via a text file in which each line corresponds to one i
 
 | Image_Path                                                   | pathological | differentiation | infiltration | segmentation |
 | ------------------------------------------------------------ | ------------ | --------------- | ------------ | ------------ |
-| ![image1](./images/1.jpg) |       0       |          2       |       2       |  ![image1_mask](./images/1_mask.jpg)            |
-| ![image1](./images/2.jpg) |        1      |         0        |       0       |  ![image1_mask](./images/2_mask.jpg)            |
-| ![image1](./images/3.jpg) |       1       |         1        |       1       |  ![image1_mask](./images/3_mask.jpg)            |
+| ![image1](./images/1.jpg) |       Benign       |          -       |       -       |  ![image1_mask](./images/1_mask.jpg)            |
+| ![image1](./images/2.jpg) |       Maligant     |         Poorly differentiated        |       Submucosal       |  ![image1_mask](./images/2_mask.jpg)            |
+| ![image1](./images/3.jpg) |       Maligant       |         well-differentiated        |      mucosal        |  ![image1_mask](./images/3_mask.jpg)            |
 
-
-
- 
 
 For example:
 
@@ -47,18 +44,17 @@ The multi-task labels are assigned based on pathological reports and expert anno
 
 **Task II. Differentiation Degree (three-class classification)**
 
--  Label 0: Poorly differentiated types, including poorly and moderately-poorly differentiated adenocarcinoma.
--  Label 1: Well to moderately differentiated types, including moderately, moderately-well, and well-differentiated adenocarcinoma.
-
--   Label 2: High-grade intraepithelial neoplasia (HGIN), which does not yet show invasive behavior but is clinically treated as an early malignant lesion. It is thus separated into its own category.
+-  **Label 0**: Poorly differentiated types, including poorly and moderately-poorly differentiated adenocarcinoma.
+-  **Label 1**: Well to moderately differentiated types, including moderately, moderately-well, and well-differentiated adenocarcinoma.
+-  **Label 2:** Benign lesion or High-grade intraepithelial neoplasia (HGIN), which does not yet show invasive behavior but is clinically treated as an early malignant lesion. It is thus separated into its own category.
 
  
 
-**Task III. Invasion Depth (three-class classification)**
+**Task III. Infiltration Depth (three-class classification)**
 
-- Label 0: Intra-mucosal invasion, including the mucosal layer and muscularis mucosa.
--  Label 1: Submucosal invasion.
-- Label 2: HGIN, which lacks stromal invasion but is treated with similar caution. It is assigned a separate category.
+- **Label 0:** Submucosal invasion.
+- **Label 1:** Intra-mucosal invasion, including the mucosal layer and muscularis mucosa.
+- **Label 2:** Benign or HGIN, which lacks stromal invasion but is treated with similar caution. It is assigned a separate category.
 
 
 
@@ -80,4 +76,4 @@ The segmentation mask is a single-channel binary image, where:
 
 - All clinical labels should be verified by experienced endoscopists and pathologists to ensure consistency with diagnosis and clinical treatment strategies.
 - The image path should be relative to the dataset root directory and should be consistent with the data loading pipeline used in training.
-- l To prevent information leakage during model training and evaluation, care should be taken to split images from the same patient into the same subset (either training or validation), if applicable.****
+- To prevent information leakage during model training and evaluation, care should be taken to split images from the same patient into the same subset (either training or validation), if applicable.****
