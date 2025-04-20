@@ -16,7 +16,7 @@ The dataset is organized via a text file in which each line corresponds to one i
 
 | Image_Path                                                   | pathological | differentiation | infiltration | segmentation |
 | ------------------------------------------------------------ | ------------ | --------------- | ------------ | ------------ |
-| <img src="https://github.com/blwang598/TSP-SAM/tree/main/images/1.jpg", width="30%"> |       Benign       |          -       |       -       |  ![image1_mask](./images/1_mask.jpg)            |
+| <img src="https://github.com/blwang598/TSP-SAM/tree/main/images/1.jpg" width="30%"> |       Benign       |          -       |       -       |  ![image1_mask](./images/1_mask.jpg)            |
 | ![image1](./images/1.jpg) |       Benign       |          -       |       -       |  ![image1_mask](./images/1_mask.jpg)            |
 | ![image1](./images/2.jpg) |       Maligant     |         Poorly differentiated        |       Submucosal       |  ![image1_mask](./images/2_mask.jpg)            |
 | ![image1](./images/3.jpg) |       Maligant       |         Well differentiated        |      Mucosal        |  ![image1_mask](./images/3_mask.jpg)            |
