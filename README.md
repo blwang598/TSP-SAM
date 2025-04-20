@@ -23,11 +23,11 @@ The dataset is organized via a text file in which each line corresponds to one i
 
 The descriptions of the above examples:
 
-images/001.jpg 0 2 2
+- images/001.jpg 0 2 2
 
-images/002.jpg 1 0 0
+- images/002.jpg 1 0 0
 
-images/003.jpg 1 1 1
+- images/003.jpg 1 1 1
 
 This annotation file is used for both training and validation splits and should be formatted consistently.
 
