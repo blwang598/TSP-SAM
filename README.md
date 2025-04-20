@@ -18,7 +18,7 @@ The dataset is organized via a text file in which each line corresponds to one i
 | ------------------------------------------------------------ | ------------ | --------------- | ------------ | ------------ |
 | ![image1](./images/1.jpg) |       Benign       |          -       |       -       |  ![image1_mask](./images/1_mask.jpg)            |
 | ![image1](./images/2.jpg) |       Maligant     |         Poorly differentiated        |       Submucosal       |  ![image1_mask](./images/2_mask.jpg)            |
-| ![image1](./images/3.jpg) |       Maligant       |         well-differentiated        |      mucosal        |  ![image1_mask](./images/3_mask.jpg)            |
+| ![image1](./images/3.jpg) |       Maligant       |         Well differentiated        |      Mucosal        |  ![image1_mask](./images/3_mask.jpg)            |
 
 
 The descriptions of the above examples:
