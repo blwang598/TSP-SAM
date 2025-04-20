@@ -63,17 +63,3 @@ The multi-task labels are assigned based on pathological reports and expert anno
 For lesion segmentation tasks, each input image is paired with a corresponding binary segmentation mask. The naming convention and format are standardized as follows:
 
 For an image file named image1.jpg, its corresponding segmentation label should be named image1_mask.jpg.
-
-The segmentation mask is a single-channel binary image, where:
-
-- Pixel value 1 indicates the lesion region.
-
-- Pixel value 0 indicates the background (non-lesion areas).
-
-
-
-#### Notes on Data Preparation
-
-- All clinical labels should be verified by experienced endoscopists and pathologists to ensure consistency with diagnosis and clinical treatment strategies.
-- The image path should be relative to the dataset root directory and should be consistent with the data loading pipeline used in training.
-- To prevent information leakage during model training and evaluation, care should be taken to split images from the same patient into the same subset (either training or validation), if applicable.****
