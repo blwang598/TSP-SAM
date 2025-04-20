@@ -21,11 +21,13 @@ The dataset is organized via a text file in which each line corresponds to one i
 | ![image1](./images/3.jpg) |       Maligant       |         well-differentiated        |      mucosal        |  ![image1_mask](./images/3_mask.jpg)            |
 
 
-For example:
+The descriptions of the above examples:
 
-images/001.jpg 1 0 1
+images/001.jpg 0 2 2
 
-images/002.jpg 0 1 0
+images/002.jpg 1 0 0
+
+images/003.jpg 1 1 1
 
 This annotation file is used for both training and validation splits and should be formatted consistently.
 
