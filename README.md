@@ -65,3 +65,37 @@ The multi-task labels are assigned based on pathological reports and expert anno
 For lesion segmentation tasks, each input image is paired with a corresponding binary segmentation mask. The naming convention and format are standardized as follows:
 
 For an image file named image1.jpg, its corresponding segmentation label should be named image1_mask.jpg.
+
+
+### 2. Install Environment
+
+#### Requirements
+
+- Linux with Python$\geq$3.7.
+- Pytorch$\geq$​1.13.1 and torchvision that matches the Pytorch installation.
+- Install pytorch lightning that matches the Pytorch installation.
+- pip install -r requirements.txt
+
+
+
+### 3. Training
+
+- Download pretrained [Tiny-ViT-5M](https://github.com/wkcn/TinyViT-model-zoo/releases/download/checkpoints/{tiny_vit_5m_22kto1k_distill}.pth) for initializing parameters.
+- Set your own datasets path/checkpoint path/prompt type settings in configs.py.
+- Run train.py
+
+
+
+### 4. Inference
+
+- Download pretrained [TSP-SAM](https://pan.baidu.com/s/18YAu960xjY-WhC51Z1LXsw?pwd=vw4p) for initializing.
+- Set your own datasets path/checkpoint path/prompt type settings in configs.py.
+- Run validation.py
+
+
+
+### Acknowledgement
+
+- [SAM](https://github.com/facebookresearch/segment-anything)
+- [lightning SAM](https://github.com/luca-medeiros/lightning-sam)
+- [wesam](https://github.com/zhang-haojie/wesam)
