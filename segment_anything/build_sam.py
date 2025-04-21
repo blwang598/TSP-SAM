@@ -8,13 +8,15 @@ import torch
 
 from functools import partial
 
-from .modeling import (ImageEncoderViT, MaskDecoder, PromptEncoder, Sam, Sam_0, Sam_1, TwoWayTransformer,
-                       TinyViT, CombinedClassifier, Classifiy_TwoWayTransformer, FuseTSPG,
-                       Classifier_ab0, Classifier_ab1, Classifier_ab2, CombinedClassifier_batch_fore,
-                       CombinedClassifier_batch_aft_bl, CombinedClassifier_batch_aft_fh, CombinedClassifier_batch_aft_sd)  # 只需要更改后面两个分类器的结构就可以实现消融
+from .modeling import (ImageEncoderViT, MaskDecoder, PromptEncoder, Sam, TwoWayTransformer,
+                       TinyViT, Classifiy_TwoWayTransformer, FuseTSPG,
+                       CombinedClassifier_batch_fore,
+                       CombinedClassifier_batch_aft_bl,
+                       CombinedClassifier_batch_aft_fh,
+                       CombinedClassifier_batch_aft_sd)
 
 
-def build_sam_vit_t_batched_mgda(checkpoint=None):  # 建立mobileSAM模型
+def build_sam_vit_t_batched_mgda(checkpoint=None):
     prompt_embed_dim = 256
     image_size = 1024
     vit_patch_size = 16
@@ -23,7 +25,7 @@ def build_sam_vit_t_batched_mgda(checkpoint=None):  # 建立mobileSAM模型
             image_encoder=TinyViT(
                 img_size=1024,
                 in_chans=3,
-                num_classes=1000,  # image encoder用的是tinyVit
+                num_classes=1000,
                 embed_dims=[64, 128, 160, 320],
                 depths=[2, 2, 6, 2],
                 num_heads=[2, 4, 5, 10],

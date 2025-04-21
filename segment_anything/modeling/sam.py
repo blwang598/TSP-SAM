@@ -17,8 +17,6 @@ from .mask_decoder import MaskDecoder
 from .prompt_encoder import PromptEncoder
 from .classifier import CombinedClassifier
 from .fuse_tspg import FuseTSPG
-from .classifier_ab1 import Classifier_ab1, Classifier_ab0
-from .classifier_ab2 import Classifier_ab2
 from .classifier_batch import CombinedClassifier_batch_fore, CombinedClassifier_batch_aft_bl, CombinedClassifier_batch_aft_sd, CombinedClassifier_batch_aft_fh
 
 
